@@ -52,19 +52,17 @@ export default class RDAppList extends React.Component {
                       this.props.onSelect && this.props.onSelect(event, item);
                     }}
                   >
-                    <Card>
-                      <CardHeader className="text-left">
-                        {item}
-                        <div className="card-header-actions">
-                          <button
-                            type="button"
-                            onClick={event => this.props.onDelete(event, item)}
-                          >
-                            X
-                          </button>
-                        </div>
-                      </CardHeader>
-                    </Card>
+                    <div className="text-left">
+                      {item}{" "}
+                      <div className="card-header-actions">
+                        <button
+                          className="card-header-action btn btn-new"
+                          onClick={event => this.props.onDelete(event, item)}
+                        >
+                          X
+                        </button>
+                      </div>
+                    </div>
                   </ListGroupItem>
                 );
               })}

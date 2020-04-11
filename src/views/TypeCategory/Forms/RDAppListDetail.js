@@ -32,7 +32,7 @@ export default class RDAppListDetail extends React.Component {
     return (
       <Card style={{ border: "2", borderColor: "primary" }}>
         <CardHeader className="text-left">
-          <strong>{this.props.detailItem}</strong>
+          <strong>{this.props.detailItem.typeCode}</strong>
           {this.getActions()}
         </CardHeader>
         <CardBody>{this.props.children}</CardBody>

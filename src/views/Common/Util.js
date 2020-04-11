@@ -1,3 +1,5 @@
+import React from "react";
+
 export default class Util {
   static makeDescription(word) {
     let desc = "";
@@ -87,3 +89,16 @@ export default class Util {
     return { modalTitle, modalMessage };
   }
 }
+
+export const CloseButton = (item, onClick) => {
+  return (
+    <div className="card-header-actions">
+      <button
+        className="card-header-action btn btn-new"
+        onClick={event => onClick(event, item)}
+      >
+        X
+      </button>
+    </div>
+  );
+};

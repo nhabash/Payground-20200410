@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.scss";
 import "./styles.css";
-import TestRDAppList from "./TestRDAppList";
+import TypeCategoryWizard from "./views/TypeCategory/Forms/TypeCategoryWizard";
 
 export default function App() {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <TestRDAppList />
+      <TypeCategoryWizard />
     </div>
   );
 }
