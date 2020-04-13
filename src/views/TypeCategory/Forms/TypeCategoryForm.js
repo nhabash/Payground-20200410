@@ -38,7 +38,6 @@ export default class TypeCategoryForm extends React.Component {
       >
         {({ errors, status, touched }) => (
           <Card>
-            <CardHeader />
             <CardBody>
               <Form>
                 <VField
