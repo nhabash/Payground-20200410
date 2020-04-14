@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "TypeCategoryMapping",
+    "description": "TypeCategory mapping to domain model attributes and entities",
+    "comments": "",
+    "additionalProperties": false,
+    "properties": {
+        "TypeCategoryIdentifierText": {
+            "type": "string",
+            "maxLength": 200,
+            "primaryKey": true
+        },
+        "TypeCategoryName": {
+            "type": "string",
+            "maxLength": 200
+        },
+        "ModelName": {
+            "type": "string",
+            "maxLength": 200
+        },
+        "Entity": {
+            "type": "array",
+            "additionalItems": true,
+            "uniqueItems": false,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "EntityName": {
+                        "type": "string",
+                        "maxLength": 200
+                    },
+                    "Attributes": {
+                        "id": "Attributes",
+                        "type": "array",
+                        "additionalItems": true,
+                        "uniqueItems": false,
+                        "items": {
+                            "id": "AttributeName",
+                            "type": "object",
+                            "properties": {
+                                "AttributeName": {
+                                    "type": "string",
+                                    "maxLength": 100
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "AttributeName"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "EntityName"
+                ]
+            }
+        }
+    },
+    "required": [
+        "TypeCategoryIdentifierText",
+        "TypeCategoryName",
+        "ModelName",
+        "Entity"
+    ]
+}

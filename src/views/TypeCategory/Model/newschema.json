@@ -1,0 +1,622 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "systemIdentifierText",
+        "typeCategoryName",
+        "typeCategoryIdentifierText"
+    ],
+    "properties": {
+        "versionInfo": {
+            "$id": "#/properties/mlUri",
+            "type": "object",
+            "title": "The VersionInfo Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "properties": {
+                "id": {
+                    "$id": "#/properties/versionInfo/id",
+                    "type": "string",
+                    "title": "The id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                        "12122333-0223-4122-8212-033022300122"
+                    ]
+                },
+                "fileVersion": {
+                    "$id": "#/properties/versionInfo/fileVersion",
+                    "type": "string",
+                    "title": "The fileVersion Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                        "V4.2.1"
+                    ]
+                },
+                "targettedRelease": {
+                    "$id": "#/properties/versionInfo/targettedRelease",
+                    "type": "string",
+                    "title": "The targettedRelease Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                        "R1"
+                    ]
+                },
+                "loadedBy": {
+                    "$id": "#/properties/versionInfo/loadedBy",
+                    "type": "string",
+                    "title": "The loadedBy Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "examples": [
+                        "user1"
+                    ]
+                },
+                "loadDate": {
+                    "$id": "#/properties/versionInfo/loadDate",
+                    "type": "number",
+                    "title": "The loadDate Schema",
+                    "description": "An explanation about the purpose of this instance.  Numeric representation of load date, which is the date/time of when this load was submitted.",
+                    "examples": [
+                        "1584369403994"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "fileVersion",
+                "targettedRelease",
+                "loadedBy",
+                "loadDate"
+            ]
+        },
+        "mlUri": {
+            "$id": "#/properties/mlUri",
+            "type": "string",
+            "title": "The Mluri Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "/TypeCategory/NT_ISOFundAccountingStructureType.json"
+            ]
+        },
+        "systemIdentifierText": {
+            "$id": "#/properties/systemIdentifierText",
+            "type": "string",
+            "title": "The Systemidentifiertext Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "NT_ISO"
+            ]
+        },
+        "typeCategoryName": {
+            "$id": "#/properties/typeCategoryName",
+            "type": "string",
+            "title": "The Typecategoryname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "FundAccountingStructureType"
+            ]
+        },
+        "rightSystemName": {
+            "$id": "#/properties/rightSystemName",
+            "type": "string",
+            "title": "The Rightsystemname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                ""
+            ]
+        },
+        "defaultTypeCode": {
+            "$id": "#/properties/defaultTypeCode",
+            "type": "string",
+            "title": "The Defaulttypecode Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                ""
+            ]
+        },
+        "rightTypeCategoryName": {
+            "$id": "#/properties/rightTypeCategoryName",
+            "type": "string",
+            "title": "The Righttypecategoryname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                ""
+            ]
+        },
+        "typeCategoryIdentifierText": {
+            "$id": "#/properties/typeCategoryIdentifierText",
+            "type": "string",
+            "title": "The Typecategoryidentifiertext Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "NT_ISOFundAccountingStructureType"
+            ]
+        },
+        "typeCategoryDescription": {
+            "$id": "#/properties/typeCategoryDescription",
+            "type": "string",
+            "title": "The Typecategorydescription Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Denotes accouting structure"
+            ]
+        },
+        "type": {
+            "$id": "#/properties/type",
+            "type": "array",
+            "title": "The Type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/type/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "typeCode": "I",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": "",
+                        "typeDescription": "Primary Account.",
+                        "typeName": "Primary Account."
+                    },
+                    {
+                        "rightTypeCode": "",
+                        "typeDescription": "Independent Account. Default.",
+                        "typeName": "Independent Account. Default.",
+                        "typeCode": "",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "typeDescription": "Duplicate Account.",
+                        "typeName": "Duplicate Account.",
+                        "typeCode": "D",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": ""
+                    },
+                    {
+                        "rightTypeCode": "",
+                        "typeDescription": "Group (G) Account.",
+                        "typeName": "Group (G) Account.",
+                        "typeCode": "G",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": "",
+                        "typeDescription": "Group (M) Account.",
+                        "typeName": "Group (M) Account.",
+                        "typeCode": "M"
+                    },
+                    {
+                        "typeCode": "R",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": "",
+                        "typeDescription": "Reporting Account.",
+                        "typeName": "Reporting Account."
+                    },
+                    {
+                        "typeDescription": "Represents a Sub-account if attached to a Group (G) Account or a Manager Account if attached to a Group (M) Account.",
+                        "typeName": "Represents a Sub-account if attached to a Group (G) Account or a Manager Account if attached to a Group (M) Account.",
+                        "typeCode": "S",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": ""
+                    },
+                    {
+                        "typeDescription": "Group (V) Account.",
+                        "typeName": "Group (V) Account.",
+                        "typeCode": "V",
+                        "tagsArray": [
+                            {
+                                "tagName": "",
+                                "tagValue": ""
+                            }
+                        ],
+                        "rightTypeCode": ""
+                    }
+                ],
+                "required": [
+                    "rightTypeCode",
+                    "typeName",
+                    "typeDescription",
+                    "tagsArray",
+                    "typeCode"
+                ],
+                "properties": {
+                    "rightTypeCode": {
+                        "$id": "#/properties/type/items/properties/rightTypeCode",
+                        "type": "string",
+                        "title": "The Righttypecode Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    },
+                    "typeName": {
+                        "$id": "#/properties/type/items/properties/typeName",
+                        "type": "string",
+                        "title": "The Typename Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Primary Account."
+                        ]
+                    },
+                    "typeDescription": {
+                        "$id": "#/properties/type/items/properties/typeDescription",
+                        "type": "string",
+                        "title": "The Typedescription Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Primary Account."
+                        ]
+                    },
+                    "tagsArray": {
+                        "$id": "#/properties/type/items/properties/tagsArray",
+                        "type": "array",
+                        "title": "The Tagsarray Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/type/items/properties/tagsArray/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "tagName": "",
+                                    "tagValue": ""
+                                }
+                            ],
+                            "required": [
+                                "tagName",
+                                "tagValue"
+                            ],
+                            "properties": {
+                                "tagName": {
+                                    "$id": "#/properties/type/items/properties/tagsArray/items/properties/tagName",
+                                    "type": "string",
+                                    "title": "The Tagname Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        ""
+                                    ]
+                                },
+                                "tagValue": {
+                                    "$id": "#/properties/type/items/properties/tagsArray/items/properties/tagValue",
+                                    "type": "string",
+                                    "title": "The Tagvalue Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        ""
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "typeCode": {
+                        "$id": "#/properties/type/items/properties/typeCode",
+                        "type": "string",
+                        "title": "The Typecode Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "I"
+                        ]
+                    }
+                }
+            }
+        },
+        "systems": {
+            "$id": "#/properties/systems",
+            "type": "array",
+            "title": "The Systems Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/systems/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "mappings": [
+                            {
+                                "to": "Y [GDPR Processed]",
+                                "from": "E"
+                            }
+                        ],
+                        "name": "MF"
+                    },
+                    {
+                        "mappings": [
+                            {
+                                "from": "[Not Assigned]",
+                                "to": "Null [No]"
+                            },
+                            {
+                                "to": "E [Yes erasure complete]",
+                                "from": "E"
+                            },
+                            {
+                                "to": "Y [Yes awaiting erasure]",
+                                "from": "Y"
+                            }
+                        ],
+                        "name": "ICON"
+                    }
+                ],
+                "required": [
+                    "name",
+                    "mappings"
+                ],
+                "properties": {
+                    "name": {
+                        "$id": "#/properties/systems/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "MF"
+                        ]
+                    },
+                    "mappings": {
+                        "$id": "#/properties/systems/items/properties/mappings",
+                        "type": "array",
+                        "title": "The Mappings Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/systems/items/properties/mappings/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "from": "E",
+                                    "to": "Y [GDPR Processed]"
+                                }
+                            ],
+                            "required": [
+                                "from",
+                                "to"
+                            ],
+                            "properties": {
+                                "from": {
+                                    "$id": "#/properties/systems/items/properties/mappings/items/properties/from",
+                                    "type": "string",
+                                    "title": "The From Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "E"
+                                    ]
+                                },
+                                "to": {
+                                    "$id": "#/properties/systems/items/properties/mappings/items/properties/to",
+                                    "type": "string",
+                                    "title": "The To Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "Y [GDPR Processed]"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "model": {
+            "$id": "#/properties/model",
+            "type": "array",
+            "title": "The Model Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/model/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "entities": [
+                            {
+                                "entityName": "DividendInstruction",
+                                "attributes": [
+                                    {
+                                        "attributeName": "DistributionType"
+                                    }
+                                ]
+                            },
+                            {
+                                "entityName": "AnonymizationOverride",
+                                "attributes": [
+                                    {
+                                        "attributeName": "OverrideRequesterID"
+                                    },
+                                    {
+                                        "attributeName": "OverrideActionType"
+                                    }
+                                ]
+                            },
+                            {
+                                "entityName": "AMLException",
+                                "attributes": [
+                                    {
+                                        "attributeName": "AMLExceptionType"
+                                    }
+                                ]
+                            }
+                        ],
+                        "modelName": "InvestorLDM"
+                    }
+                ],
+                "required": [
+                    "modelName",
+                    "entities"
+                ],
+                "properties": {
+                    "modelName": {
+                        "$id": "#/properties/model/items/properties/modelName",
+                        "type": "string",
+                        "title": "The Modelname Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "InvestorLDM"
+                        ]
+                    },
+                    "entities": {
+                        "$id": "#/properties/model/items/properties/entities",
+                        "type": "array",
+                        "title": "The Entities Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "items": {
+                            "$id": "#/properties/model/items/properties/entities/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "entityName": "DividendInstruction",
+                                    "attributes": [
+                                        {
+                                            "attributeName": "DistributionType"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entityName": "AnonymizationOverride",
+                                    "attributes": [
+                                        {
+                                            "attributeName": "OverrideRequesterID"
+                                        },
+                                        {
+                                            "attributeName": "OverrideActionType"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "entityName": "AMLException",
+                                    "attributes": [
+                                        {
+                                            "attributeName": "AMLExceptionType"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "required": [
+                                "entityName",
+                                "attributes"
+                            ],
+                            "properties": {
+                                "entityName": {
+                                    "$id": "#/properties/model/items/properties/entities/items/properties/entityName",
+                                    "type": "string",
+                                    "title": "The Entityname Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "DividendInstruction"
+                                    ]
+                                },
+                                "attributes": {
+                                    "$id": "#/properties/model/items/properties/entities/items/properties/attributes",
+                                    "type": "array",
+                                    "title": "The Attributes Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#/properties/model/items/properties/entities/items/properties/attributes/items",
+                                        "type": "object",
+                                        "title": "The Items Schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": {},
+                                        "examples": [
+                                            {
+                                                "attributeName": "DistributionType"
+                                            }
+                                        ],
+                                        "required": [
+                                            "attributeName"
+                                        ],
+                                        "properties": {
+                                            "attributeName": {
+                                                "$id": "#/properties/model/items/properties/entities/items/properties/attributes/items/properties/attributeName",
+                                                "type": "string",
+                                                "title": "The Attributename Schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "DistributionType"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

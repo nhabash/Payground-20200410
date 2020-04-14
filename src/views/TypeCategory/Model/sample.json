@@ -1,0 +1,170 @@
+{
+    "mlUri": "/TypeCategory/NT_ISOFundAccountingStructureType.json",
+    "systemIdentifierText": "NT_ISO",
+    "typeCategoryName": "FundAccountingStructureType",
+    "rightSystemName": "",
+    "defaultTypeCode": "",
+    "rightTypeCategoryName": "",
+    "typeCategoryIdentifierText": "NT_ISOFundAccountingStructureType",
+    "typeCategoryDescription": "Denotes accouting structure",
+    "type": [
+        {
+            "rightTypeCode": "",
+            "typeName": "Primary Account.",
+            "typeDescription": "Primary Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "I"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Independent Account. Default.",
+            "typeDescription": "Independent Account. Default.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": ""
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Duplicate Account.",
+            "typeDescription": "Duplicate Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "D"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Group (G) Account.",
+            "typeDescription": "Group (G) Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "G"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Group (M) Account.",
+            "typeDescription": "Group (M) Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "M"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Reporting Account.",
+            "typeDescription": "Reporting Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "R"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Represents a Sub-account if attached to a Group (G) Account or a Manager Account if attached to a Group (M) Account.",
+            "typeDescription": "Represents a Sub-account if attached to a Group (G) Account or a Manager Account if attached to a Group (M) Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "S"
+        },
+        {
+            "rightTypeCode": "",
+            "typeName": "Group (V) Account.",
+            "typeDescription": "Group (V) Account.",
+            "tagsArray": [
+                {
+                    "tagName": "",
+                    "tagValue": ""
+                }
+            ],
+            "typeCode": "V"
+        }
+    ],
+    "systems": [
+        {
+            "name": "MF",
+            "mappings": [
+                {
+                    "from": "E",
+                    "to": "Y [GDPR Processed]"
+                }
+            ]
+        },
+        {
+            "name": "ICON",
+            "mappings": [
+                {
+                    "from": "[Not Assigned]",
+                    "to": "Null [No]"
+                },
+                {
+                    "from": "E",
+                    "to": "E [Yes erasure complete]"
+                },
+                {
+                    "from": "Y",
+                    "to": "Y [Yes awaiting erasure]"
+                }
+            ]
+        }
+    ],
+    "model": [
+        {
+            "modelName": "InvestorLDM",
+            "entities": [
+                {
+                    "entityName": "DividendInstruction",
+                    "attributes": [
+                        {
+                            "attributeName": "DistributionType"
+                        }
+                    ]
+                },
+                {
+                    "entityName": "AnonymizationOverride",
+                    "attributes": [
+                        {
+                            "attributeName": "OverrideRequesterID"
+                        },
+                        {
+                            "attributeName": "OverrideActionType"
+                        }
+                    ]
+                },
+                {
+                    "entityName": "AMLException",
+                    "attributes": [
+                        {
+                            "attributeName": "AMLExceptionType"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

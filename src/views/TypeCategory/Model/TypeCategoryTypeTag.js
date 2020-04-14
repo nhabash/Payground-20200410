@@ -1,3 +1,4 @@
+
 export default class TypeCategoryTypeTag {
   constructor(obj) {
     if (obj) {
@@ -9,13 +10,9 @@ export default class TypeCategoryTypeTag {
     }
   }
 
-  getName() {
-    return "TypeCategoryTypeTag";
-  }
+  getName() { return 'TypeCategoryTypeTag'; }
 
-  checkRequired() {
-    return true;
-  } // Does not have required fields
+  checkRequired() { return true; } // Does not have required fields
 
   isNull(field) {
     return field === null || field === undefined;
@@ -41,13 +38,13 @@ export default class TypeCategoryTypeTag {
     let value = null;
 
     switch (e) {
-      case "tagName":
+      case 'tagName':
         value = this.tagName;
         break;
-      case "tagValue":
+      case 'tagValue':
         value = this.tagValue;
         break;
-      case "id":
+      case 'id':
         value = this.id;
         break;
       default:
@@ -63,10 +60,10 @@ export default class TypeCategoryTypeTag {
 
   updateValues(entry) {
     switch (entry.attributeName) {
-      case "tagName":
+      case 'tagName':
         this.setTagName(entry.attributeValue);
         break;
-      case "tagValue":
+      case 'tagValue':
         this.setTagValue(entry.attributeValue);
         break;
       default:
@@ -118,10 +115,7 @@ export default class TypeCategoryTypeTag {
   equal(atag) {
     let result = false;
 
-    if (
-      this.getTagName() !== atag.getTagName() &&
-      this.getTagValue() !== atag.getTagValue()
-    ) {
+    if (this.getTagName() !== atag.getTagName() && this.getTagValue() !== atag.getTagValue()) {
       result = false;
     } else {
       result = true;
